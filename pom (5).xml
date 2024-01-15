@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.egencia.service.hotel-analytics</groupId>
+	<artifactId>hotel-analytics-service-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Hotel Analytics Service Parent</name>
+	<description>Hotel Analytics Service Parent</description>
+	<modules>
+		<module>hotel-analytics-service</module>
+		<module>hotel-analytics-service-acceptance</module>
+		<module>hotel-analytics-service-deployment-test</module>
+	</modules>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>17</java-version>
+        <skip.checkstyle>false</skip.checkstyle>
+		<surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
+		<failsafe.plugin.version>3.0.0-M5</failsafe.plugin.version>
+		<!-- Exclude files from Sonar UT, IT coverage :
+        Use this: Comma-delimited list of file path patterns to be excluded from coverage calculations -->
+		<sonar.coverage.exclusions>
+			**/com/egencia/service/hotelanalytics/**/model/*.java,
+			**/com/egencia/service/hotelanalytics/**/model/**/*.java,
+			**/com/egencia/service/hotelanalytics/model/*.java,
+			**/com/egencia/service/hotelanalytics/authentication/*.java,
+			**/com/egencia/service/hotelanalytics/authentication/**/*.java,
+			**/com/egencia/service/hotelanalytics/stats/*.java,
+			**/com/egencia/service/hotelanalytics/config/*.java,
+			**/com/egencia/service/hotelanalytics/dao/config/*.java
+		</sonar.coverage.exclusions>
+	</properties>
+	<dependencies>
+		<!-- Security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+	</dependencies>
+</project>
