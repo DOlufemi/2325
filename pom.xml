@@ -9,9 +9,6 @@
 	<name>Hotel Analytics Service Parent</name>
 	<description>Hotel Analytics Service Parent</description>
 	<modules>
-		<module>hotel-analytics-service</module>
-		<module>hotel-analytics-service-acceptance</module>
-		<module>hotel-analytics-service-deployment-test</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
