@@ -9,7 +9,7 @@
 		<version>3.1.2</version>
 	</parent>
 
-	<groupId>com.egencia.service.hotel-analytics</groupId>
+	<groupId>com.aaa.aab.hotel-analytics</groupId>
 	<artifactId>hotel-analytics-service-parent</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0-SNAPSHOT</version>
@@ -25,16 +25,6 @@
 		<failsafe.plugin.version>3.0.0-M5</failsafe.plugin.version>
 		<!-- Exclude files from Sonar UT, IT coverage :
         Use this: Comma-delimited list of file path patterns to be excluded from coverage calculations -->
-		<sonar.coverage.exclusions>
-			**/com/egencia/service/hotelanalytics/**/model/*.java,
-			**/com/egencia/service/hotelanalytics/**/model/**/*.java,
-			**/com/egencia/service/hotelanalytics/model/*.java,
-			**/com/egencia/service/hotelanalytics/authentication/*.java,
-			**/com/egencia/service/hotelanalytics/authentication/**/*.java,
-			**/com/egencia/service/hotelanalytics/stats/*.java,
-			**/com/egencia/service/hotelanalytics/config/*.java,
-			**/com/egencia/service/hotelanalytics/dao/config/*.java
-		</sonar.coverage.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
